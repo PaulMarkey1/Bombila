@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Я.Бомбила — Добавить смену</title>
+
+  <link rel="stylesheet" href="CSS/general.css">
+  <link rel="stylesheet" href="CSS/index1.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Я.Бомбила</h1>
+</header>
+
+<h2 class="page-title">Добавить смену</h2>
+
+<main class="main">
+  <form class="shift-form" id="shift-form">
+
+    <!-- ✅ ДАТА (обычный label сверху) -->
+    <div class="form-group">
+      <label class="form-label" for="shift-date">Дата</label>
+      <input type="date" id="shift-date" class="form-input" required>
+    </div>
+
+    <!-- ВРЕМЯ -->
+    <div class="form-group">
+      <label class="form-label">Время</label>
+
+      <div class="time-wrapper">
+        <div class="floating">
+          <input type="number" id="shift-hours" class="form-input" placeholder=" " required>
+          <label for="shift-hours">Часы</label>
+        </div>
+
+        <div class="floating">
+          <input type="number" id="shift-minutes" class="form-input" placeholder=" " required>
+          <label for="shift-minutes">Мин</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- КМ -->
+    <div class="form-group floating">
+      <input type="number" id="shift-distance" class="form-input" placeholder=" ">
+      <label for="shift-distance">Км</label>
+    </div>
+
+    <!-- ЗАКАЗЫ -->
+    <div class="form-group floating">
+      <input type="number" id="shift-orders" class="form-input" placeholder=" ">
+      <label for="shift-orders">Заказы</label>
+    </div>
+
+    <!-- ВЫРУЧКА -->
+    <div class="form-group floating">
+      <input type="number" id="shift-revenue" class="form-input" placeholder=" ">
+      <label for="shift-revenue">Выручка</label>
+    </div>
+
+    <!-- РАСХОДЫ -->
+    <div class="form-group floating">
+      <input type="number" id="shift-expenses" class="form-input" placeholder=" ">
+      <label for="shift-expenses">Расходы</label>
+    </div>
+
+    <!-- БОНУСЫ -->
+    <div class="form-group floating">
+      <input type="number" id="shift-bonuses" class="form-input" placeholder=" ">
+      <label for="shift-bonuses">Бонусы</label>
+    </div>
+
+    <!-- КНОПКИ -->
+    <div class="btn-container">
+      <button type="submit" class="btn-primary">Сохранить</button>
+      <button type="button" class="btn-secondary" id="cancel-btn">Вернуться</button>
+      <button type="button" class="btn-danger" id="finish-without-save">
+        Завершить без сохранения
+      </button>
+    </div>
+
+  </form>
+</main>
+
+<!-- ПОДТВЕРЖДЕНИЕ -->
+<div class="back-modal" id="confirm-modal">
+  <div class="back-modal-box">
+    <p>Вы уверены? Смена будет удалена</p>
+    <div class="back-modal-buttons">
+      <button class="btn-danger" id="confirm-yes">Да</button>
+      <button class="btn-secondary" id="confirm-no">Нет</button>
+    </div>
+  </div>
+</div>
+
+<!-- ФИНАЛ -->
+<div class="back-modal" id="back-modal">
+  <div class="back-modal-box">
+    <p>Смена удалена</p>
+    <div class="back-modal-buttons">
+      <button class="btn-primary" id="back-modal-ok">OK</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/index1.js"></script>
+</body>
+</html>

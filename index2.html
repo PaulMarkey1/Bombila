@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Я.Бомбила — Смены</title>
+
+  <link rel="stylesheet" href="CSS/general.css">
+  <link rel="stylesheet" href="CSS/index2.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Я.Бомбила</h1>
+  <button id="header-menu-btn" class="header-menu-btn">⋯</button>
+</header>
+
+<h2 class="page-title">Мои смены</h2>
+
+<main class="main">
+  <div id="stats" class="content-card"></div>
+  <div id="shift-list"></div>
+
+  <div class="btn-container">
+    <button class="btn-primary" id="back-btn">Назад</button>
+  </div>
+</main>
+
+<script type="module" src="js/index2.js"></script>
+
+<div id="toast" class="toast hidden">Смена обновлена</div>  
+
+<!-- ✅ ОСТАВЛЯЕМ ТОЛЬКО ЭТУ МОДАЛКУ -->
+<div id="delete-modal" class="back-modal">
+  <div class="back-modal-box">
+    <p>Удалить смену?</p>
+    <div class="back-modal-buttons">
+      <button class="btn-danger" id="delete-confirm">Удалить</button>
+      <button class="btn-secondary" id="delete-cancel">Отмена</button>
+    </div>
+  </div>
+</div>  
+<div id="backup-modal" class="back-modal">
+  <div class="back-modal-box">
+    <p>Управление данными</p>
+
+    <div class="back-modal-buttons vertical">
+      <button id="backup-save" class="btn-primary">Сделать backup</button>
+      <button id="backup-load" class="btn-secondary">Загрузить backup</button>
+      <button id="backup-close" class="btn-secondary">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<input type="file" id="backup-file" accept=".json" hidden>
+</body>
+</html>
