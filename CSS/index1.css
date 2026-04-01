@@ -1,0 +1,152 @@
+/* === PAGE TITLE === */
+.page-title {
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* === FORM === */
+.shift-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.8rem;
+  background: #ffffff;
+  border-radius: 20px;
+
+  /* рамка */
+  border: 1.5px solid rgba(255, 220, 0, 0.8);
+
+  /* лёгкая тень */
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.04),
+    0 0 12px rgba(255, 220, 0, 0.25);
+
+  transition: all 0.25s ease;
+}
+
+/* 🔥 реакция при вводе */
+.shift-form:focus-within {
+  border-color: #ffc400;
+  transform: translateY(-2px);
+}
+
+/* === GROUP === */
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+/* === LABEL (обычный) === */
+.form-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+}
+
+/* === TIME === */
+.time-wrapper {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.time-wrapper .floating {
+  flex: 1;
+}
+
+/* === FLOATING LABEL === */
+.floating {
+  position: relative;
+}
+
+.floating input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1.5px solid #e5e5e5;
+  background: #fafafa;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+/* hover эффект */
+.floating input:hover {
+  border-color: #d6d6d6;
+}
+
+/* LABEL */
+.floating label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* ACTIVE */
+.floating input:focus + label,
+.floating input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.75rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* FOCUS */
+.floating input:focus {
+  outline: none;
+  border-color: #ffdc00;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 220, 0, 0.2);
+}
+
+/* === BUTTONS === */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(145deg, #ffdc00, #ffd000);
+  color: #000;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(145deg, #ffd000, #ffc400);
+}
+
+.btn-secondary {
+  background: #f2f2f2;
+  padding: 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: #111;
+  color: #ffdc00;
+  padding: 1rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+/* === MOBILE === */
+@media (max-width: 480px) {
+  .shift-form {
+    margin: 0 1rem;
+    padding: 1.4rem;
+  }
+}

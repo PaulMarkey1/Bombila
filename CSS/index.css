@@ -1,1 +1,95 @@
+/* === НАВИГАЦИЯ === */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
 
+/* === ОСНОВНОЙ КОНТЕНТ === */
+#content {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* === КАРТОЧКА СМЕНЫ === */
+.shift-card {
+  padding: 1.5rem;
+  margin: 1rem 2%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.shift-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* === ТАЙМЕР === */
+.live-timer {
+  margin: 1.2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* === КНОПКИ ВНУТРИ СМЕНЫ === */
+.shift-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* === АКТИВНАЯ СМЕНА === */
+#shift-action-btn.active {
+  background: linear-gradient(145deg, #f44336, #d32f2f);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+}
+
+/* === АНИМАЦИЯ === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === АДАПТИВ === */
+@media (max-width: 480px) {
+  .nav {
+    gap: 1.2rem;
+    padding: 1.5rem 0.8rem;
+  }
+
+  #content {
+    padding: 1.5rem;
+  }
+
+  #content h2 {
+    font-size: 1.45rem;
+  }
+
+  #content p {
+    font-size: 1.1rem;
+  }
+}
